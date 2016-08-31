@@ -1,0 +1,22 @@
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Body</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% for note in @notes %>
+      <tr>
+        <td><%= note.name %></td>
+        <td><%= note.body %></td>
+        <td>
+          <%= link_to "Show", note_path(note), :class => "btn btn-success btn-xs" %>
+          <%= link_to "Edit", edit_note_path(note), :class => "btn btn-warning btn-xs" %>
+          <%= link_to "Delete", note_path(note), :method => :delete, :class => "btn btn-danger btn-xs", :data => {:confirm => "Are you Sure!"} %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
