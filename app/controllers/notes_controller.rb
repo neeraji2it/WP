@@ -29,6 +29,16 @@ class NotesController < ApplicationController
     @note = Note.find(params[:id])
     @childnote = Note.new
   end
+  
+  def create_child_note
+    @note = Note.find(params[:id])
+    @childnote = Note.new(new_params.merge(:user_id => current_user.id))
+  	if @childnote.save
+      if remotipart_submitted?
+        respond_format
+      end
+  	end
+  end
 
   def edit
   	@note = Note.find(params[:id])

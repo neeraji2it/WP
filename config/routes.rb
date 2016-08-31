@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :notes do
     member do
       get :child_note
+      post :create_child_note
     end
   end
   resources :categories, only: [:show, :new, :create]

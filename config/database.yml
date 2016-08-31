@@ -7,7 +7,11 @@
 default: &default
   adapter: mysql2
   username: root
+<<<<<<< HEAD
   password: root
+=======
+  password: dinemedia
+>>>>>>> 321e68c816ece187d05928356d5c996bec39ef2d
   pool: 5
   timeout: 5000
 

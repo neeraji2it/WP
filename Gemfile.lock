@@ -44,10 +44,13 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (9.0.5)
+<<<<<<< HEAD
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
+=======
+>>>>>>> 321e68c816ece187d05928356d5c996bec39ef2d
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -95,7 +98,10 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
+<<<<<<< HEAD
     mimemagic (0.3.0)
+=======
+>>>>>>> 321e68c816ece187d05928356d5c996bec39ef2d
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     multi_json (1.12.1)
@@ -104,12 +110,15 @@ GEM
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     orm_adapter (0.5.0)
+<<<<<<< HEAD
     paperclip (4.3.7)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+=======
+>>>>>>> 321e68c816ece187d05928356d5c996bec39ef2d
     pkg-config (1.1.7)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
@@ -144,7 +153,10 @@ GEM
     rdoc (4.2.2)
       json (~> 1.4)
     ref (2.0.0)
+<<<<<<< HEAD
     remotipart (1.2.1)
+=======
+>>>>>>> 321e68c816ece187d05928356d5c996bec39ef2d
     responders (2.2.0)
       railties (>= 4.2.0, < 5.1)
     sass (3.4.22)
@@ -206,10 +218,15 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mysql2
+<<<<<<< HEAD
   paperclip
   quiet_assets
   rails (= 4.2.6)
   remotipart (~> 1.2)
+=======
+  quiet_assets
+  rails (= 4.2.6)
+>>>>>>> 321e68c816ece187d05928356d5c996bec39ef2d
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

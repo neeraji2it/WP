@@ -11,8 +11,11 @@ gem 'quiet_assets'
 gem "therubyracer"
 gem "twitter-bootstrap-rails"
 gem 'ancestry'
+<<<<<<< HEAD
 gem 'paperclip'
 gem 'remotipart', '~> 1.2'
+=======
+>>>>>>> 321e68c816ece187d05928356d5c996bec39ef2d
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

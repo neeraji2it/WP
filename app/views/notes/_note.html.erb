@@ -3,6 +3,7 @@
 
   <p><%= note.body %></p>
   <p><%= note.image.present? ? image_tag(note.image.url(:original), :width => 200) : '' %></p>
+  <p><%= link_to "New Note", child_note_note_path(note), :remote => true, :class => "btn btn-warning btn-xs pull-right", :style => "position: relative; top: -70px; left: 10px;" %></p>
 </div>
 <br />
 

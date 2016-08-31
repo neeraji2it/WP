@@ -1,8 +1,9 @@
 <h2>Child Notes
-  <%= link_to "New Note", child_note_note_path(@note), :remote => true, :class => "btn btn-warning btn-xs pull-right" %>
 </h2>
 <hr >
 <div id="new_note"></div>
-<%= nested_notes @note.subtree.arrange(:order => :created_at) %>
+<div id="notes">
+  <%= nested_notes @note.subtree.arrange(:order => :created_at) %>
+</div>
 
 
