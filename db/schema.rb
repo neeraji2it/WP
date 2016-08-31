@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20160830072810) do
     t.string   "name",               limit: 255
     t.string   "ancestry",           limit: 255
     t.integer  "category_id",        limit: 4
-    t.integer  "parent_id",          limit: 4
     t.string   "image_file_name",    limit: 255
     t.string   "image_content_type", limit: 255
     t.integer  "image_file_size",    limit: 4
