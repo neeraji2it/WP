@@ -1,0 +1,11 @@
+<h1 class="page-header">
+    <%= @category.name %>    
+</h1>
+<h2>Notes
+<%= link_to "New Note", new_note_path(:category_id => @category.id), :remote => true, :class => "btn btn-warning btn-xs pull-right" %>
+</h2>
+<hr >
+<div id="new_note"></div>
+<div id="notes">
+    <%= render :partial => "/notes/index" %>
+</div>

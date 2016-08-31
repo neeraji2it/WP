@@ -1,0 +1,13 @@
+<%= form_for @note, :url => notes_path(:category_id => @category.id), :method => "POST", :remote => true do |f| %>
+<%= f.hidden_field :category_id, :value => @category.id %>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <%= f.text_field :name, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="body">Body:</label>
+    <%= f.text_area :body, :class => "form-control" %>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+<% end %>
+<hr >
