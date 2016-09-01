@@ -23,6 +23,7 @@ class NotesController < ApplicationController
   def show
     @note = Note.find(params[:id])
     @notes = Note.where("ancestry = #{@note.id}")
+
   end
   
   def child_note

@@ -7,7 +7,13 @@ Rails.application.routes.draw do
       post :create_child_note
     end
   end
-  resources :categories, only: [:show, :new, :create]
+  resources :categories, only: [:show, :new, :create, :index] do
+    member do
+      get :child_category
+      post :create_child_category
+    end
+  end
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

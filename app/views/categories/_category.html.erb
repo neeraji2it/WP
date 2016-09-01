@@ -1,0 +1,18 @@
+<div style="border: 1px solid gray; padding: 12px; border-radius: 5px;">
+  <p><%= link_to category.name, category %></p>
+  <p><%= link_to "New category", child_category_category_path(category), :remote => true, :class => "btn btn-warning btn-xs" %></p>
+
+
+
+</div>
+<br />
+
+<style>
+  .nested_categories {
+    margin-left: 30px;
+  }
+
+  .nested_categories .nested_categories .nested_categories .nested_categories {
+    margin-left: 0;
+  }
+</style>

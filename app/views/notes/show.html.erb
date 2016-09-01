@@ -5,5 +5,10 @@
 <div id="notes">
   <%= nested_notes @note.subtree.arrange(:order => :created_at) %>
 </div>
-
+</h2>
+<hr >
+<div id="new_note"></div>
+<div id="notes">
+  <%= render :partial => "/notes/index" %>
+</div>
 

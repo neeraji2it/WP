@@ -1,0 +1,17 @@
+<div id="new_category"></div>
+<div id="categories">
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+  
+    </tr>
+  </thead>
+  <tbody>
+  <% @categories.each do |cat| %>
+      <tr>
+        <td><%= cat.name %></td>
+       
+            <% end %>
+      </tr>
+</tbody></table></div>

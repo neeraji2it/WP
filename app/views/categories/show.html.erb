@@ -1,3 +1,9 @@
-<h1 class="page-header">
-    <%= @category.name %>    
-</h1>
+<h2><%= link_to "+New category", child_category_category_path(@category), :remote => true, :class => "btn btn-warning btn-xs" %>
+<%= link_to "+Create Note", notes_path(), :class => "btn btn-warning btn-xs pull-right" %>
+
+</h2>
+<hr >
+<div id="new_category"></div>
+<div id="categories">
+  <%= render :partial => "/notes/index" %>
+</div>
