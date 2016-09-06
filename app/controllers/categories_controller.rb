@@ -27,6 +27,7 @@ def child_category
   
   def create_child_category
     @category = Category.find(params[:id])
+    
     @childcategory = Category.new(new_params.merge(:user_id => current_user.id))
   	if @childcategory.save
       if remotipart_submitted?
@@ -37,9 +38,11 @@ def child_category
 
 	def show
 	  @category = Category.find(params[:id])
+
 	  @notes = @category.notes
 	  @categories = Category.where("ancestry = #{@category.id}")
-	  
+	  @notes = Note.where("ancestry = #{@category.id}")
+
 	end
 
 	private
