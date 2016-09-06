@@ -47,9 +47,11 @@
         </button>
         <h1><a class="navbar-brand" href="#">WPW</a></h1>
          <ul class="nav navbar-nav">
+        <%if user_signed_in?%>
              <li><%= link_to "Work", category_path(1) %></li>
               <li><%= link_to "Play", category_path(2)  %></li>
               <li><%= link_to "Well-Being", category_path(3) %></li>
+              <% end %>
          </ul>
         <div class="navbar-collapse collapse navbar-responsive-collapse pull-right">
           <ul class="nav navbar-nav">

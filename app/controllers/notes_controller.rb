@@ -1,4 +1,5 @@
 class NotesController < ApplicationController
+
   before_filter :is_login?
 
   def index
@@ -63,4 +64,5 @@ class NotesController < ApplicationController
   def new_params
   	params.require(:note).permit!
   end
+  
 end

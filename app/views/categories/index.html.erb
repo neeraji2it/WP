@@ -1,22 +1,4 @@
 <h2>Category
   <%= link_to "New Category", new_category_path(), :class => "btn btn-warning btn-xs pull-right" %>
 </h2>
-
-<div id="new_category"></div>
-<div id="categories">
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-    
-      <th>Name</th>
-  
-    </tr>
-  </thead>
-  <tbody>
-  <% @categories.each do |cat| %>
-      <tr>
-        <td><%= cat.name %></td>
-       
-            <% end %>
-      </tr>
-</tbody></table></div>
+<%= render :partial => "index" %>
