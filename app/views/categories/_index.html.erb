@@ -4,14 +4,16 @@
   <thead>
     <tr>
       <th>Name</th>
-  
+  <th>Actions</th>
     </tr>
   </thead>
   <tbody>
-  <% @categories.each do |cat| %>
+  <% @categories.each do |category| %>
       <tr>
-        <td><%= cat.name %></td>
-       
+        <td><%= category.name %></td>
+        <td><%= link_to "Show", category_path(category), :class => "btn btn-success btn-xs" %>
+          <%#= link_to "Edit", edit_category_path(category), :class => "btn btn-warning btn-xs" %>
+          <%= link_to "Delete", category_path(category), :method => :delete, :class => "btn btn-danger btn-xs", :data => {:confirm => "Are you Sure!"} %></td>
             <% end %>
       </tr>
 </tbody></table></div>
