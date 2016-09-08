@@ -30,6 +30,7 @@ def child_category
     @category = Category.find(params[:id])
     
     @childcategory = Category.new(new_params.merge(:user_id => current_user.id))
+    
   	if @childcategory.save
       if remotipart_submitted?
         respond_format

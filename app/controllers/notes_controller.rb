@@ -1,6 +1,6 @@
 class NotesController < ApplicationController
 
-  before_filter :is_login?
+ before_filter :is_login?
 
   def index
   	@notes = current_user.notes.where("ancestry is null")

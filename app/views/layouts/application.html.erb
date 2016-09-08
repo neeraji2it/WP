@@ -69,13 +69,9 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
             <li><%= link_to "Notes", notes_path %></li>
-              <li><%#= link_to "Work", category_path(1) %></li>
-              <li><%#= link_to "Play", category_path(2)  %></li>
-              <li><%#= link_to "Well-Being", category_path(3) %></li>
-
-    <% Category.all.each do|category| %>
-<li><%= link_to category.name, category_path(category) %></li>
-<% end %>
+              <% if params[:controller] == 'categories' && params[:action] == 'show' %>
+              <li><%= nested_categories @category.subtree.arrange(:order => :created_at) %></li>
+              <% end %>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
