@@ -1,5 +1,17 @@
 <%= link_to "+New category", child_category_category_path(@category), :remote => true, :class => "btn btn-warning btn-xs" %>
-<%= link_to "+Create Note", child_note_note_path(@category), :remote => true,:class => "btn btn-warning btn-xs pull-right" %>
+
+
+<%= link_to "+Create Note", child_note_note_path(@category), :remote => true,:class => "btn btn-warning btn-xs pull-center" %>
+
+<div class="text-right">
+<%= form_tag notes_path, :method => 'get',:id => "notes_search" do %>    
+   <div class="inner-addon float: left;">
+
+    <%= text_field_tag :search, params[:search],placeholder: "Search Notes", class:"btn btn-default " %>
+    <%= submit_tag "Search", :name => nil,class:"btn btn-warning " %> 
+<% end %>
+
+</div></div>
 
 </h2>
 <hr >
@@ -9,4 +21,9 @@
   <%= render :partial => "/notes/index" %>
 </div>
 
-
+<style>
+<style>
+   div.text-right{
+     float: right;
+}
+  </style>
