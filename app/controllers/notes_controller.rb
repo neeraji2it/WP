@@ -5,11 +5,6 @@ class NotesController < ApplicationController
   def index
   	@notes = current_user.notes.where("ancestry is null")
 
-     if params[:search]
-       @notes = Note.search(params[:search]).order("created_at DESC")
-    else
-       @notes = Note.all.order('created_at DESC')
-    end
   end
 
   def new
@@ -36,6 +31,8 @@ class NotesController < ApplicationController
   def child_note
     @note = Note.find(params[:id])
     @childnote = Note.new
+
+
   end
   
   def create_child_note
