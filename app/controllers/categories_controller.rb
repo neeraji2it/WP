@@ -7,7 +7,7 @@ def index
 end
 	def new
 	  @category = Category.new
-respond_format
+   respond_format
 	    
 	end
 
