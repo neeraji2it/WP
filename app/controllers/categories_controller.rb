@@ -1,12 +1,11 @@
 class CategoriesController < ApplicationController
-	
 	before_filter :is_login?
 
 def index
 @categories = current_user.categories.where("ancestry is null")
 end
 	def new
-	  @category = Category.new
+  @category = Category.new
    respond_format
 	    
 	end

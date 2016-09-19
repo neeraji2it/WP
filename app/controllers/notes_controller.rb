@@ -35,9 +35,7 @@ class NotesController < ApplicationController
   def child_note
     @note = Note.find(params[:id])
     @childnote = Note.new
-
-
-  end
+end
   
   def create_child_note
     @note = Note.find(params[:id])

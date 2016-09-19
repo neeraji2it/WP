@@ -81,17 +81,8 @@
           </div><!--/.well -->
         </div><!--/span-->
         <% end %>
-     <%if user_signed_in?%>    
-<div class="text-right">
-<%= form_tag notes_path, :method => 'get',:id => "notes_search" do %>    
-   <div class="inner-addon float: left;">
 
-    <%= text_field_tag :search, params[:search],placeholder: "Search Notes", class:"btn btn-default " %>
-    <%= submit_tag "Search", :name => nil,class:"btn btn-warning " %> 
-<% end %>
-<% end %>
 
-</div></div>
         <div class="col-lg-9">
           <%= bootstrap_flash %>
           <%= yield %>
